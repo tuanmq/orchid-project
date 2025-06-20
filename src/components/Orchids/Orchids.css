@@ -1,0 +1,357 @@
+.orchid-container {
+  padding: 5px;
+  text-align: center;
+  max-width: 1200px;
+  margin:  auto;
+}
+
+.orchid-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.orchid-card {
+  position: relative;
+  border-radius: 16px;
+  padding: 16px;
+  background: linear-gradient(135deg, #fdf6f9, #f0f8ff);
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.orchid-card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.orchid-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.orchid-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.orchid-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Optional themed backgrounds */
+.orchid-card.bg1 {
+  background: linear-gradient(135deg, #fff0f5, #f0ffff);
+}
+
+.orchid-card.bg2 {
+  background: linear-gradient(135deg, #fefbd8, #f8f8ff);
+}
+
+.orchid-card.bg3 {
+  background: linear-gradient(135deg, #e6f0fa, #fdfdff);
+}
+
+.orchid-card.bg4 {
+  background: linear-gradient(135deg, #f5f5dc, #fefefe);
+}
+
+.orchid-card.bg5 {
+  background: linear-gradient(135deg, #f0fff0, #fafafa);
+}
+
+/* Dark mode */
+.App.dark .orchid-card {
+  background: linear-gradient(135deg, rgba(44, 44, 44, 0.95), rgba(60, 60, 60, 0.9));
+  border-color: #444;
+  color: #ddd;
+}
+
+.App.dark .orchid-card p {
+  color: #bbb;
+}
+
+/* Remaining styles kept unchanged */
+
+.color-circle {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-left: 8px;
+  border: 1px solid #888;
+  vertical-align: middle;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.image-wrapper img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.badge {
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  position: absolute;
+  z-index: 2;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.App.light .badge {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #000;
+}
+
+.App.dark .badge {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+
+.top-left {
+  top: 8px;
+  left: 8px;
+}
+
+.top-right {
+  top: 8px;
+  right: 8px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  width: 400px;
+  border-radius: 12px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.detail-button {
+  background: linear-gradient(to right, #c084fc, #d8b4fe); /* tím gradient nhẹ */
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(192, 132, 252, 0.3);
+  display: inline-block;
+}
+
+.detail-button:hover {
+  background: linear-gradient(to right, #a855f7, #c084fc);
+  box-shadow: 0 6px 16px rgba(192, 132, 252, 0.45);
+  transform: translateY(-2px);
+}
+
+.App.light {
+  background-color: white;
+  color: black;
+}
+
+.App.dark {
+  background-color: #222;
+  color: #0f0505;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  background: linear-gradient(to right, #f8f9fa, #ffffff);
+  border-bottom: 1px solid #ccc;
+}
+
+.App.dark .app-header {
+  background: linear-gradient(to right, #2c2c2c, #1a1a1a);
+  border-bottom: 1px solid #444;
+}
+
+.theme-toggle-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background-color: #007bff;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.theme-toggle-btn:hover {
+  background-color: #0056b3;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.main-nav {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: inherit;
+  padding: 0;
+  user-select: none;
+}
+
+.nav-link {
+  color: #007bff;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  background-color: #007bff;
+  color: white;
+  outline: none;
+  cursor: pointer;
+}
+
+.divider {
+  margin: 0 8px;
+  color: #666;
+  user-select: none;
+}
+
+.App.dark .nav-link {
+  color: #90caf9;
+}
+
+.App.dark .nav-link:hover,
+.App.dark .nav-link:focus {
+  background-color: #90caf9;
+  color: #222;
+}
+
+.App.dark .divider {
+  color: #aaa;
+}
+
+.orchid-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #4a148c; /* Màu tím đậm sang trọng */
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.orchid-title::after {
+  content: '';
+  display: block;
+  width: 60%;
+  height: 4px;
+  background: linear-gradient(to right, #ce93d8, #ab47bc);
+  margin: 8px auto 0;
+  border-radius: 4px;
+}
+
+.orchid-detail {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 24px;
+  background: linear-gradient(135deg, #ffffff, #f9f9f9);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.orchid-detail:hover {
+  transform: translateY(-4px);
+}
+
+.orchid-detail img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.orchid-detail h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: #4a148c;
+}
+
+.orchid-detail p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+/* Optional: để hiển thị màu hoa */
+.orchid-detail .color-display {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  font-size: 0.95rem;
+}
+
+.orchid-detail .color-circle {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid #888;
+}

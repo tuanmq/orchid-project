@@ -1,0 +1,168 @@
+/* General reset and layout */
+body, html {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Theme styles */
+body.light {
+  background: url('https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+}
+
+body.dark {
+  background-color: #1e1e1e;
+  color: #eee;
+}
+
+.App {
+  width: 100%;
+  backdrop-filter: blur(2px);
+}
+
+/* Header */
+.header {
+  background-color: white;
+  padding: 12px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-center {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center; /* ✅ Căn giữa tất cả theo chiều dọc */
+  justify-content: space-between;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center; /* ✅ Logo và chữ thẳng hàng */
+  gap: 8px;
+}
+
+.logo-image {
+  height: 30px;
+  width: auto;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center; /* ✅ Căn giữa nút Home và Contact */
+  gap: 24px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center; /* ✅ Căn giữa từng chữ trong link */
+  height: 100%;
+}
+
+.nav-link:hover {
+  color: #06090c;
+}
+
+/* Theme toggle button */
+.theme-toggle-btn {
+  background: transparent;
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  background-color: #f0f0f0;
+}
+
+/* Main Content */
+.main-content {
+  padding: 32px;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(3px);
+  border-radius: 12px;
+  margin: 24px;
+}
+
+/* Footer */
+.footer {
+  background: rgba(240, 248, 255, 0.9);
+  padding: 20px 32px;
+  text-align: center;
+  font-size: 14px;
+  color: #444;
+  border-top: 1px solid #ccc;
+  backdrop-filter: blur(5px);
+}
+
+/* Rating Stars */
+.rating-stars {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+  margin: 8px 0;
+}
+
+.star {
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.star.filled {
+  color: #facc15;
+}
+
+.star.empty {
+  color: #d4d4d4;
+}
+
+/* Header in dark mode */
+body.dark .header {
+  background-color: #1f1f1f;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.05);
+}
+
+/* Footer in dark mode */
+body.dark .footer {
+  background: rgba(30, 30, 30, 0.9);
+  color: #ccc;
+  border-top: 1px solid #444;
+}
+
+/* Logo text in dark mode */
+body.dark .logo-text {
+  color: #f0f0f0;
+}
+
+body.dark .theme-toggle-btn {
+  color: #ffffff;
+  border: 1px solid #888;
+  background-color: #333;
+}
+
+body.dark .theme-toggle-btn:hover {
+  background-color: #444;
+}
+
+
