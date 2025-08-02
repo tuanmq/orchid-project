@@ -81,7 +81,6 @@
   color: #bbb;
 }
 
-/* Remaining styles kept unchanged */
 
 .color-circle {
   display: inline-block;
@@ -287,7 +286,7 @@ body.dark {
 .orchid-title {
   font-size: 30px;
   font-weight: 700;
-  color: #4a148c; /* Màu tím đậm sang trọng */
+  color: #4a148c; 
   margin-bottom: 30px;
   position: relative;
   display: inline-block;
@@ -340,7 +339,6 @@ body.dark {
   line-height: 1.6;
 }
 
-/* Optional: để hiển thị màu hoa */
 .orchid-detail .color-display {
   display: inline-flex;
   align-items: center;
@@ -354,4 +352,106 @@ body.dark {
   height: 18px;
   border-radius: 50%;
   border: 1px solid #888;
+}
+
+.orchid-detail-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+.App.dark .orchid-detail-container {
+  background: #1e1e1e;
+}
+
+.orchid-image-section {
+  flex: 1 1 55%;
+  min-width: 300px;
+}
+
+.orchid-detail-image {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  max-height: 500px;
+}
+
+.orchid-info-section {
+  flex: 1 1 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.orchid-detail-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #4a148c;
+  margin-bottom: 10px;
+}
+
+.App.dark .orchid-info-section {
+  color: #ddd;
+}
+
+.orchid-video {
+  margin-top: 30px;
+}
+
+.orchid-video h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.orchid-video iframe {
+  width: 100%;
+  height: 300px;
+  border-radius: 12px;
+  border: none;
+}
+
+.orchid-button-group {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+  .orchid-detail-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .orchid-info-section, .orchid-image-section {
+    flex: 1 1 100%;
+  }
+
+  .orchid-video iframe {
+    height: 200px;
+  }
+}
+
+.add-orchid-btn {
+  background-color: #c903ae2f;
+  color: rgb(75, 12, 221);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.add-orchid-btn:hover {
+  background-color: #cb6adf;
 }

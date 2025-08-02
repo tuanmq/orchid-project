@@ -1,4 +1,4 @@
-/* General reset and layout */
+
 body, html {
   width: 100%;
   overflow-x: hidden;
@@ -8,24 +8,12 @@ body, html {
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Theme styles */
-body.light {
-  background: url('https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
-  background-size: cover;
-  color: #333;
-}
 
 body.dark {
   background-color: #1e1e1e;
   color: #eee;
 }
 
-.App {
-  width: 100%;
-  backdrop-filter: blur(2px);
-}
-
-/* Header */
 .header {
   background-color: white;
   padding: 12px 0;
@@ -36,13 +24,13 @@ body.dark {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  align-items: center; /* ✅ Căn giữa tất cả theo chiều dọc */
+  align-items: center; 
   justify-content: space-between;
 }
 
 .logo-section {
   display: flex;
-  align-items: center; /* ✅ Logo và chữ thẳng hàng */
+  align-items: center; 
   gap: 8px;
 }
 
@@ -61,7 +49,7 @@ body.dark {
 
 .main-nav {
   display: flex;
-  align-items: center; /* ✅ Căn giữa nút Home và Contact */
+  align-items: center; 
   gap: 24px;
 }
 
@@ -71,7 +59,7 @@ body.dark {
   font-size: 16px;
   font-weight: 500;
   display: flex;
-  align-items: center; /* ✅ Căn giữa từng chữ trong link */
+  align-items: center; 
   height: 100%;
 }
 
@@ -79,7 +67,6 @@ body.dark {
   color: #06090c;
 }
 
-/* Theme toggle button */
 .theme-toggle-btn {
   background: transparent;
   border: 1px solid #ccc;
@@ -95,16 +82,6 @@ body.dark {
   background-color: #f0f0f0;
 }
 
-/* Main Content */
-.main-content {
-  padding: 32px;
-  background-color: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(3px);
-  border-radius: 12px;
-  margin: 24px;
-}
-
-/* Footer */
 .footer {
   background: rgba(240, 248, 255, 0.9);
   padding: 20px 32px;
@@ -115,7 +92,6 @@ body.dark {
   backdrop-filter: blur(5px);
 }
 
-/* Rating Stars */
 .rating-stars {
   display: flex;
   gap: 4px;
@@ -137,20 +113,17 @@ body.dark {
   color: #d4d4d4;
 }
 
-/* Header in dark mode */
 body.dark .header {
   background-color: #1f1f1f;
   box-shadow: 0 2px 4px rgba(255, 255, 255, 0.05);
 }
 
-/* Footer in dark mode */
 body.dark .footer {
   background: rgba(30, 30, 30, 0.9);
   color: #ccc;
   border-top: 1px solid #444;
 }
 
-/* Logo text in dark mode */
 body.dark .logo-text {
   color: #f0f0f0;
 }
@@ -165,4 +138,96 @@ body.dark .theme-toggle-btn:hover {
   background-color: #444;
 }
 
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-name {
+  max-width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.logout-btn {
+  padding: 4px 8px;
+  font-size: 12px;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.logout-btn:hover {
+  background-color: #f2f2f2;
+}
+
+.light .user-section {
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dark .user-section {
+  background-color: #333;
+  color: #f5f5f5;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid currentColor;
+}
+
+.logout-btn {
+  padding: 6px 12px;
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.light .logout-btn:hover {
+  background-color: #ddd;
+}
+
+.dark .logout-btn:hover {
+  background-color: #555;
+}
 
