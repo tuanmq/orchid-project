@@ -45,6 +45,7 @@ Dự án hướng đến việc rèn luyện:
 - Dự án sử dụng MockAPI làm cơ sở dữ liệu ảo (dạng JSON)
 - Dữ liệu không được lưu trữ thực tế, chỉ phục vụ mục đích thực hành
 - Đây là một dự án cá nhân, chưa dùng cho sản phẩm thực tế
+- Bắt buộc phải sử dụng cổng 5173 để chạy dự án, có thể thay đổi cổng trong file vite.config.js
 
 ## Tác giả
 
